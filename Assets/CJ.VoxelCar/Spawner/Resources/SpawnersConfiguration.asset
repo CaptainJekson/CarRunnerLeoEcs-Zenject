@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 915efced7dbf69342a3901dc2d550d9b, type: 3}
+  m_Name: SpawnersConfiguration
+  m_EditorClassIdentifier: 
+  Spawners:
+  - SpawnObject: {fileID: 4725808417683476866, guid: 2f416ef0732d7594da92c016735520a0,
+      type: 3}
+    Position: {x: 0, y: 0, z: 15.1}
+    _distanceMin: 0
+    _distanceMax: 0
+    _initDistance: 0
+    _destructionDistance: 0
+    _isInitDistance: 0
+  - SpawnObject: {fileID: 1092940921914794372, guid: 9fc589b76b501134cba2b60339653fae,
+      type: 3}
+    Position: {x: 0, y: 0.1, z: 0}
+    _distanceMin: 0
+    _distanceMax: 0
+    _initDistance: 0
+    _destructionDistance: 0
+    _isInitDistance: 0
