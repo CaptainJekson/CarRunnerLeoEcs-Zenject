@@ -1,38 +1,48 @@
 ﻿using CJ.VoxelCar.Player.Components;
-using CJ.VoxelCar.Player.Configuration;
 using CJ.VoxelCar.Spawner.Configuration;
 using Leopotam.Ecs;
 using UnityEngine;
 
 namespace CJ.VoxelCar.Spawner.Systems
 {
-    class ObjectCreationSpawnerSystem : IEcsRunSystem
+    class ObjectCreationSpawnerSystem : IEcsRunSystem, IEcsInitSystem
     {
         SpawnersConfiguration _spawnersConfiguration;
 
-        private EcsFilter<SpawnerComponent> _filter;
+        private EcsFilter<SpawnerComponent> _spawnerFilter;
 
         public ObjectCreationSpawnerSystem(SpawnersConfiguration spawnersConfiguration)
         {
             _spawnersConfiguration = spawnersConfiguration;
         }
 
-        public void Run()
+        public void Init()
         {
-            foreach (var i in _filter)
+            foreach (var i in _spawnerFilter)
             {
-                Debug.Log(i);
+                ref var spawnerComponent = ref _spawnerFilter.Get1(i);
 
-                ref var spawnerComponent = ref _filter.Get1(i);
-                Generate(_spawnersConfiguration, spawnerComponent, i);
+                spawnerComponent.SpawnPosition.z = Random.Range(_spawnersConfiguration.Spawners[i]._distanceMin,
+                    _spawnersConfiguration.Spawners[i]._distanceMax);
             }
         }
 
-        private void Generate(SpawnersConfiguration spawnersConfiguration, SpawnerComponent spawnerComponent, int index)
+        public void Run()
         {
-            Object.Instantiate(spawnersConfiguration.Spawners[index].SpawnObject,
-                spawnerComponent.CurrentPosition,
-                Quaternion.identity);
+            foreach (var i in _spawnerFilter)
+            {
+                ref var spawnerComponent = ref _spawnerFilter.Get1(i);
+
+                if (spawnerComponent.CurrentPosition.z > spawnerComponent.SpawnPosition.z)
+                {
+                    spawnerComponent.SpawnPosition.z += Random.Range(_spawnersConfiguration.Spawners[i]._distanceMin,
+                        _spawnersConfiguration.Spawners[i]._distanceMax);
+
+                    Object.Instantiate(_spawnersConfiguration.Spawners[i].SpawnObject,
+                        spawnerComponent.CurrentPosition,
+                        Quaternion.identity);
+                }
+            }
         }
     }
 }
