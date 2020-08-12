@@ -90,8 +90,6 @@ GameObject:
   - component: {fileID: 705320395837091505}
   - component: {fileID: 8077515014215554898}
   - component: {fileID: 8213262317410757238}
-  - component: {fileID: 6026866761282998868}
-  - component: {fileID: -3050833801941685358}
   m_Layer: 0
   m_Name: BlueCar
   m_TagString: Untagged
@@ -144,32 +142,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
---- !u!114 &6026866761282998868
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4153933859356671625}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d87ec6a803207484bbcbadd27874cda9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speed: 9
---- !u!114 &-3050833801941685358
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4153933859356671625}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dca5447fd6bfd043b3b49f92e1f1903, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _destructionDistance: 100
 --- !u!1 &7750792483353756293
 GameObject:
   m_ObjectHideFlags: 0

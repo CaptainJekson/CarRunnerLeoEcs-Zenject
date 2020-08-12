@@ -11,8 +11,6 @@ GameObject:
   - component: {fileID: 8476792002630523053}
   - component: {fileID: 8410597544525152653}
   - component: {fileID: -2976100674915270900}
-  - component: {fileID: 4040332641132616179}
-  - component: {fileID: 2633924061057380922}
   m_Layer: 0
   m_Name: Truck
   m_TagString: Untagged
@@ -64,32 +62,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
---- !u!114 &4040332641132616179
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 217543695276234308}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d87ec6a803207484bbcbadd27874cda9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speed: 6
---- !u!114 &2633924061057380922
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 217543695276234308}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dca5447fd6bfd043b3b49f92e1f1903, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _destructionDistance: 100
 --- !u!1 &871029560918444602
 GameObject:
   m_ObjectHideFlags: 0

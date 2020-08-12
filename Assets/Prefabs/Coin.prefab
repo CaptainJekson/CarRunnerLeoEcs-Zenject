@@ -89,8 +89,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8148451653295207298}
   - component: {fileID: 2814524818584077104}
-  - component: {fileID: 2950758232109666327}
-  - component: {fileID: -7368763098795798447}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -126,32 +124,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.15, y: 0.5, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2950758232109666327
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8107954988474333111}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3a9871baf7974b4f8f6f36dc4c9b047, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _rotateSpeed: 200
---- !u!114 &-7368763098795798447
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8107954988474333111}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dca5447fd6bfd043b3b49f92e1f1903, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _destructionDistance: 100
 --- !u!43 &2866922951746642385
 Mesh:
   m_ObjectHideFlags: 0

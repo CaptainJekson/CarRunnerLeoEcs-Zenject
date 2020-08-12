@@ -7,7 +7,7 @@ namespace CJ.VoxelCar.Spawner.Systems
 {
     class ObjectCreationSpawnerSystem : IEcsRunSystem, IEcsInitSystem
     {
-        SpawnersConfiguration _spawnersConfiguration;
+        private SpawnersConfiguration _spawnersConfiguration;
 
         private EcsFilter<SpawnerComponent> _spawnerFilter;
 
@@ -38,9 +38,10 @@ namespace CJ.VoxelCar.Spawner.Systems
                     spawnerComponent.SpawnPosition.z += Random.Range(_spawnersConfiguration.Spawners[i]._distanceMin,
                         _spawnersConfiguration.Spawners[i]._distanceMax);
 
-                    Object.Instantiate(_spawnersConfiguration.Spawners[i].SpawnObject,
-                        spawnerComponent.CurrentPosition,
-                        Quaternion.identity);
+                    var randomObject = Random.Range(0, _spawnersConfiguration.Spawners[i].SpawnObjects.Count);
+
+                    Object.Instantiate(_spawnersConfiguration.Spawners[i].SpawnObjects[randomObject],
+                        spawnerComponent.CurrentPosition, Quaternion.identity);
                 }
             }
         }

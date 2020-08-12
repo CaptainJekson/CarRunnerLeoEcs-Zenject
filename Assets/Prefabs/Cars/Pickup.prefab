@@ -4844,8 +4844,6 @@ GameObject:
   - component: {fileID: 1597498975717261731}
   - component: {fileID: 4250837849227694154}
   - component: {fileID: 2330815922400957639}
-  - component: {fileID: -95965554752158121}
-  - component: {fileID: -2102812721602051368}
   m_Layer: 0
   m_Name: Pickup
   m_TagString: Untagged
@@ -4898,32 +4896,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
---- !u!114 &-95965554752158121
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8444695306862497611}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d87ec6a803207484bbcbadd27874cda9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speed: 7
---- !u!114 &-2102812721602051368
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8444695306862497611}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dca5447fd6bfd043b3b49f92e1f1903, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _destructionDistance: 100
 --- !u!43 &-8966139371511063496
 Mesh:
   m_ObjectHideFlags: 0

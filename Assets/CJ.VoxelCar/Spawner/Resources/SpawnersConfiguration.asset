@@ -13,27 +13,49 @@ MonoBehaviour:
   m_Name: SpawnersConfiguration
   m_EditorClassIdentifier: 
   Spawners:
-  - SpawnObject: {fileID: 4153933859356671625, guid: 1107c52a378f17c45a2c5cbab8ce5afa,
-      type: 3}
-    Position: {x: 3, y: 1, z: 20}
-    _distanceMin: 35.6
-    _distanceMax: 72.7
-    _initDistance: 0
-    _destructionDistance: 0
-    _isInitDistance: 0
-  - SpawnObject: {fileID: 7627157772607800672, guid: 9da2682e4a18395418eb8af107656257,
-      type: 3}
-    Position: {x: 0, y: 1, z: 20}
-    _distanceMin: 10.2
-    _distanceMax: 51.7
-    _initDistance: 0
-    _destructionDistance: 0
-    _isInitDistance: 0
-  - SpawnObject: {fileID: 1305477464726057615, guid: 1e0b5b89be6658440b364cf0de1d18d1,
-      type: 3}
-    Position: {x: -3, y: 1, z: 20}
-    _distanceMin: 46.3
-    _distanceMax: 100
-    _initDistance: 0
-    _destructionDistance: 0
-    _isInitDistance: 0
+  - SpawnObjects:
+    - {fileID: 1092940921914794372, guid: 9fc589b76b501134cba2b60339653fae, type: 3}
+    Position: {x: 0, y: 0.1, z: 90}
+    _distanceMin: 96
+    _distanceMax: 96
+  - SpawnObjects:
+    - {fileID: 4725808417683476866, guid: 2f416ef0732d7594da92c016735520a0, type: 3}
+    Position: {x: 0, y: 0, z: 150}
+    _distanceMin: 150
+    _distanceMax: 150
+  - SpawnObjects:
+    - {fileID: 4153933859356671625, guid: 1107c52a378f17c45a2c5cbab8ce5afa, type: 3}
+    - {fileID: 7627157772607800672, guid: 9da2682e4a18395418eb8af107656257, type: 3}
+    - {fileID: 8444695306862497611, guid: 99b59420f29636d408fe3025380073c0, type: 3}
+    - {fileID: 6967108589351227547, guid: 0290e0e0553579c4997d94a87d6ed904, type: 3}
+    - {fileID: 1305477464726057615, guid: 1e0b5b89be6658440b364cf0de1d18d1, type: 3}
+    - {fileID: 5495968040393819482, guid: 443aa082c76302241a90eb36626d3c7f, type: 3}
+    - {fileID: 6602931252710923676, guid: 2c972c9056eb17243aefe0c9a1cd9783, type: 3}
+    - {fileID: 217543695276234308, guid: fb8bc33ed2965914887c9abe9bcac618, type: 3}
+    Position: {x: 0, y: 1, z: 80}
+    _distanceMin: 10
+    _distanceMax: 130
+  - SpawnObjects:
+    - {fileID: 4153933859356671625, guid: 1107c52a378f17c45a2c5cbab8ce5afa, type: 3}
+    - {fileID: 7627157772607800672, guid: 9da2682e4a18395418eb8af107656257, type: 3}
+    - {fileID: 8444695306862497611, guid: 99b59420f29636d408fe3025380073c0, type: 3}
+    - {fileID: 6967108589351227547, guid: 0290e0e0553579c4997d94a87d6ed904, type: 3}
+    - {fileID: 1305477464726057615, guid: 1e0b5b89be6658440b364cf0de1d18d1, type: 3}
+    - {fileID: 5495968040393819482, guid: 443aa082c76302241a90eb36626d3c7f, type: 3}
+    - {fileID: 6602931252710923676, guid: 2c972c9056eb17243aefe0c9a1cd9783, type: 3}
+    - {fileID: 217543695276234308, guid: fb8bc33ed2965914887c9abe9bcac618, type: 3}
+    Position: {x: -3, y: 1, z: 80}
+    _distanceMin: 10
+    _distanceMax: 130
+  - SpawnObjects:
+    - {fileID: 4153933859356671625, guid: 1107c52a378f17c45a2c5cbab8ce5afa, type: 3}
+    - {fileID: 7627157772607800672, guid: 9da2682e4a18395418eb8af107656257, type: 3}
+    - {fileID: 8444695306862497611, guid: 99b59420f29636d408fe3025380073c0, type: 3}
+    - {fileID: 6967108589351227547, guid: 0290e0e0553579c4997d94a87d6ed904, type: 3}
+    - {fileID: 1305477464726057615, guid: 1e0b5b89be6658440b364cf0de1d18d1, type: 3}
+    - {fileID: 5495968040393819482, guid: 443aa082c76302241a90eb36626d3c7f, type: 3}
+    - {fileID: 6602931252710923676, guid: 2c972c9056eb17243aefe0c9a1cd9783, type: 3}
+    - {fileID: 217543695276234308, guid: fb8bc33ed2965914887c9abe9bcac618, type: 3}
+    Position: {x: 3, y: 1, z: 80}
+    _distanceMin: 10
+    _distanceMax: 130

@@ -4844,8 +4844,6 @@ GameObject:
   - component: {fileID: 865303866936672297}
   - component: {fileID: -9029753903239451289}
   - component: {fileID: -6853066974889713843}
-  - component: {fileID: -4979403335676512716}
-  - component: {fileID: -8813470948697980126}
   m_Layer: 0
   m_Name: Jeep
   m_TagString: Untagged
@@ -4898,32 +4896,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
---- !u!114 &-4979403335676512716
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7627157772607800672}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d87ec6a803207484bbcbadd27874cda9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speed: 10
---- !u!114 &-8813470948697980126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7627157772607800672}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dca5447fd6bfd043b3b49f92e1f1903, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _destructionDistance: 100
 --- !u!43 &-5091777225853716317
 Mesh:
   m_ObjectHideFlags: 0

@@ -8,7 +8,7 @@ namespace CJ.VoxelCar.Spawner.Systems
 {
     sealed class PositionSpawnerRelativelyPlayerSystem : IEcsInitSystem, IEcsRunSystem
     {
-        SpawnersConfiguration _spawnersConfiguration;
+        private SpawnersConfiguration _spawnersConfiguration;
 
         private EcsWorld _world;
         private EcsFilter<PlayerComponent> _playerFilter;
