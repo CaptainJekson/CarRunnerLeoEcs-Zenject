@@ -1,7 +1,7 @@
+using CJ.VoxelCar.Spawner.Components;
 using CJ.VoxelCar.Player.Components;
 using CJ.VoxelCar.Spawner.Configuration;
 using Leopotam.Ecs;
-using System;
 using UnityEngine;
 
 namespace CJ.VoxelCar.Spawner.Systems
@@ -24,7 +24,7 @@ namespace CJ.VoxelCar.Spawner.Systems
             for (int i = 0; i < _spawnersConfiguration.Spawners.Count; i++)
             {
                 var spawnerEntity = _world.NewEntity();
-                ref var spawnerComponent = ref spawnerEntity.Get<SpawnerComponent>();
+                spawnerEntity.Get<SpawnerComponent>();
             }
         }
 

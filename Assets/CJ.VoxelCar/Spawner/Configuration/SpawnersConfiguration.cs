@@ -6,7 +6,7 @@ namespace CJ.VoxelCar.Spawner.Configuration
     [CreateAssetMenu(fileName = "SpawnersConfiguration", menuName = "Configuration/SpawnersConfiguration")]
     public class SpawnersConfiguration : ScriptableObject
     {
-        public List<Spawner> Spawners;
+        public List<Spawn> Spawners;
     }
 }
 

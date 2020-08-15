@@ -1,4 +1,4 @@
-﻿using CJ.VoxelCar.Player.Components;
+﻿using CJ.VoxelCar.Spawner.Components;
 using CJ.VoxelCar.Spawner.Configuration;
 using Leopotam.Ecs;
 using UnityEngine;
@@ -9,6 +9,7 @@ namespace CJ.VoxelCar.Spawner.Systems
     {
         private SpawnersConfiguration _spawnersConfiguration;
 
+        private EcsWorld _world;
         private EcsFilter<SpawnerComponent> _spawnerFilter;
 
         public ObjectCreationSpawnerSystem(SpawnersConfiguration spawnersConfiguration)
@@ -22,8 +23,8 @@ namespace CJ.VoxelCar.Spawner.Systems
             {
                 ref var spawnerComponent = ref _spawnerFilter.Get1(i);
 
-                spawnerComponent.SpawnPosition.z = Random.Range(_spawnersConfiguration.Spawners[i]._distanceMin,
-                    _spawnersConfiguration.Spawners[i]._distanceMax);
+                spawnerComponent.SpawnPosition.z = Random.Range(_spawnersConfiguration.Spawners[i].DistanceMin,
+                    _spawnersConfiguration.Spawners[i].DistanceMax);
             }
         }
 
@@ -35,13 +36,22 @@ namespace CJ.VoxelCar.Spawner.Systems
 
                 if (spawnerComponent.CurrentPosition.z > spawnerComponent.SpawnPosition.z)
                 {
-                    spawnerComponent.SpawnPosition.z += Random.Range(_spawnersConfiguration.Spawners[i]._distanceMin,
-                        _spawnersConfiguration.Spawners[i]._distanceMax);
+                    spawnerComponent.SpawnPosition.z += Random.Range(_spawnersConfiguration.Spawners[i].DistanceMin,
+                        _spawnersConfiguration.Spawners[i].DistanceMax);
 
                     var randomObject = Random.Range(0, _spawnersConfiguration.Spawners[i].SpawnObjects.Count);
 
-                    Object.Instantiate(_spawnersConfiguration.Spawners[i].SpawnObjects[randomObject],
+                    var objectEntity = _world.NewEntity();
+
+                    ref var spawnedObjectsComponent = ref objectEntity.Get<SpawnedObjectsComponent>();
+                    ref var destructionComponent = ref objectEntity.Get<DestructionComponent>();
+
+                    var newObject = Object.Instantiate(_spawnersConfiguration.Spawners[i].SpawnObjects[randomObject],
                         spawnerComponent.CurrentPosition, Quaternion.identity);
+
+                    spawnedObjectsComponent.SpawnedObject = newObject;
+                    spawnedObjectsComponent.Entity = objectEntity;
+                    destructionComponent.DestructionDistance = _spawnersConfiguration.Spawners[i].DistanceDestruction;
                 }
             }
         }

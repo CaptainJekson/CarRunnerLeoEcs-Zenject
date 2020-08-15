@@ -5,11 +5,12 @@ using UnityEngine;
 namespace CJ.VoxelCar.Spawner.Configuration
 {
     [Serializable]
-    public class Spawner
+    public class Spawn
     {
         public List<GameObject> SpawnObjects;
         public Vector3 Position;
-        [Range(0, 200)] public float _distanceMin;
-        [Range(0, 200)] public float _distanceMax;
+        [Range(0, 200)] public float DistanceMin;
+        [Range(0, 200)] public float DistanceMax;
+        [Range(0, 500)] public float DistanceDestruction;
     }
 }

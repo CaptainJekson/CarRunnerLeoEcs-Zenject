@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace CJ.VoxelCar.Player.Components
+namespace CJ.VoxelCar.Spawner.Components
 {
     public struct SpawnerComponent
     {

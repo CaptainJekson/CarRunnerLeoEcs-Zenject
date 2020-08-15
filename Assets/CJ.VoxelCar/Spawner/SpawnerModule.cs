@@ -13,6 +13,7 @@ namespace CJ.VoxelCar.Spawner
 
             Container.Bind<PositionSpawnerRelativelyPlayerSystem>().AsSingle();
             Container.Bind<ObjectCreationSpawnerSystem>().AsSingle();
+            Container.Bind<ObjectDestructorSystem>().AsSingle();
 
             Container.BindInterfacesAndSelfTo<SpawnerSystemsExecutor>().AsSingle().NonLazy();
         }

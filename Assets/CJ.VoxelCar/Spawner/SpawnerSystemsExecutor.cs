@@ -9,14 +9,17 @@ namespace CJ.VoxelCar.Spawner
     {
         private EcsSystems _systems;
 
-        private SpawnerSystemsExecutor(EcsWorld world, PositionSpawnerRelativelyPlayerSystem generateObjectSystem,
-            ObjectCreationSpawnerSystem objectCreationSpawnerSystem)
+        private SpawnerSystemsExecutor(EcsWorld world,
+            PositionSpawnerRelativelyPlayerSystem positionSpawnerRelativelyPlayerSystem, 
+            ObjectCreationSpawnerSystem objectCreationSpawnerSystem,
+            ObjectDestructorSystem objectDestructorSystem)
         {
             _systems = new EcsSystems(world, "SpawnerSystems");
 
             _systems
-                .Add(generateObjectSystem)
-                .Add(objectCreationSpawnerSystem);
+                .Add(positionSpawnerRelativelyPlayerSystem)
+                .Add(objectCreationSpawnerSystem)
+                .Add(objectDestructorSystem);
 
             _systems.Init();
 
