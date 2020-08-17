@@ -9,13 +9,13 @@ namespace CJ.VoxelCar.Player
     {
         private readonly EcsSystems _systems;
 
-        public PlayerSystemsExecutor(EcsWorld world, CreatePlayerCarSysmem createPlayerCarSysmem, MovementPlayerSystem movementPlayerSystem,
+        public PlayerSystemsExecutor(EcsWorld world, CreatePlayerCarSystem createPlayerCarSystem, MovementPlayerSystem movementPlayerSystem,
             PCControlPlayerSystem controlPlayerSystem)
         {
             _systems = new EcsSystems(world, "PlayerSystems");
 
             _systems
-                .Add(createPlayerCarSysmem)
+                .Add(createPlayerCarSystem)
                 .Add(movementPlayerSystem)
                 .Add(controlPlayerSystem);
 

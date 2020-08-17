@@ -7,7 +7,7 @@ namespace CJ.VoxelCar.Spawner.Systems
 {
     class ObjectCreationSpawnerSystem : IEcsRunSystem, IEcsInitSystem
     {
-        private SpawnersConfiguration _spawnersConfiguration;
+        private readonly SpawnersConfiguration _spawnersConfiguration;
 
         private EcsWorld _world;
         private EcsFilter<SpawnerComponent> _spawnerFilter;

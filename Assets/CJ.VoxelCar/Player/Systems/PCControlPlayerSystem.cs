@@ -7,8 +7,8 @@ namespace CJ.VoxelCar.Player.Systems
 {
     public class PCControlPlayerSystem : IEcsRunSystem
     {
-        RoadConfiguration _roadConfiguration;
-        PlayerConfiguration _playerConfiguration;
+        private readonly RoadConfiguration _roadConfiguration;
+        private readonly PlayerConfiguration _playerConfiguration;
 
         private EcsFilter<PlayerComponent> _filter;
 

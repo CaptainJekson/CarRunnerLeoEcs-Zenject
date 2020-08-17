@@ -21,7 +21,8 @@ namespace CJ.VoxelCar.Spawner.Systems
                 ref var destructionComponent = ref _filter.Get2(i);
 
                 if (Vector3.Distance(playerComponent.PlayerObject.transform.position,
-                    spawnedObjectComponent.SpawnedObject.transform.position) > destructionComponent.DestructionDistance)
+                    spawnedObjectComponent.SpawnedObject.transform.position) > 
+                    destructionComponent.DestructionDistance)
                 {
                     Object.Destroy(spawnedObjectComponent.SpawnedObject);
                     spawnedObjectComponent.Entity.Destroy();

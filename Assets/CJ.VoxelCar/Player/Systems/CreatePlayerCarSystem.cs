@@ -5,13 +5,13 @@ using UnityEngine;
 
 namespace CJ.VoxelCar.Player.Systems
 {
-    public class CreatePlayerCarSysmem : IEcsInitSystem
+    public class CreatePlayerCarSystem : IEcsInitSystem
     {
-        private PlayerConfiguration _playerConfiguration;
-        private RoadConfiguration _roadConfiguration;
+        private readonly PlayerConfiguration _playerConfiguration;
+        private readonly RoadConfiguration _roadConfiguration;
         private EcsWorld _world;
 
-        public CreatePlayerCarSysmem(PlayerConfiguration playerConfiguration, RoadConfiguration roadConfiguration)
+        public CreatePlayerCarSystem(PlayerConfiguration playerConfiguration, RoadConfiguration roadConfiguration)
         {
             _playerConfiguration = playerConfiguration;
             _roadConfiguration = roadConfiguration;
@@ -36,7 +36,8 @@ namespace CJ.VoxelCar.Player.Systems
 
         private GameObject CreateViewPlayer()
         {
-            var newPlayer = Object.Instantiate(_playerConfiguration.PlayerObject, _playerConfiguration.StartPosition, Quaternion.identity);
+            var newPlayer = Object.Instantiate(_playerConfiguration.PlayerObject, 
+                _playerConfiguration.StartPosition, Quaternion.identity);
 
             return newPlayer;
         }

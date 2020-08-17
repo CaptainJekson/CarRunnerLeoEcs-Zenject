@@ -8,7 +8,7 @@ namespace CJ.VoxelCar.Player.Systems
 {
     public sealed class MovementPlayerSystem : IEcsRunSystem
     {
-        RoadConfiguration _roadConfiguration;
+        private readonly RoadConfiguration _roadConfiguration;
 
         private EcsFilter<PlayerComponent> _filter;
 
@@ -37,9 +37,12 @@ namespace CJ.VoxelCar.Player.Systems
 
         private void MoveSide(PlayerComponent player, float targetX)
         {
-            player.PlayerObject.transform.position = Vector3.MoveTowards(player.PlayerObject.transform.position,
-                new Vector3(targetX, player.PlayerObject.transform.position.y,player.PlayerObject.transform.position.z),
+            var position = player.PlayerObject.transform.position;
+            
+            position = Vector3.MoveTowards(position, new Vector3(targetX, position.y,position.z),
                 player.SideSpeed * Time.deltaTime);
+            
+            player.PlayerObject.transform.position = position;
         }
     }
 }

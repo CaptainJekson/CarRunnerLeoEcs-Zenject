@@ -11,10 +11,10 @@ namespace CJ.VoxelCar.Player
             Container.Bind<PlayerConfiguration>().FromScriptableObjectResource("PlayerConfiguration").AsSingle();
             Container.Bind<RoadConfiguration>().FromScriptableObjectResource("RoadConfiguration").AsSingle();
 
-            Container.Bind<CreatePlayerCarSysmem>().AsSingle();
+            Container.Bind<CreatePlayerCarSystem>().AsSingle();
             Container.Bind<MovementPlayerSystem>().AsSingle();
             Container.Bind<PCControlPlayerSystem>().AsSingle();
-
+            
             Container.BindInterfacesAndSelfTo<PlayerSystemsExecutor>().AsSingle().NonLazy();
         }
     }
